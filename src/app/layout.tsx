@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Hind_Madurai } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/common/Header/Header";
 
-const fonts = Hind_Madurai({
+const fonts = Open_Sans({
   weight: ["300", "400", "500", "600", "700"],
   // weight: ['400', '700'],
   subsets: ["latin"],
