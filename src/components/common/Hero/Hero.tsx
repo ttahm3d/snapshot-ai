@@ -4,9 +4,10 @@ export default function Hero() {
   return (
     <section className="flex items-center justify-center pt-32 pb-16 flex-col">
       <div className="max-w-5xl mx-auto text-center px-4 md:px-0">
-        <h1 className="font-bold">
-          <p className="text-6xl tracking-tighter">
-            Introducing <span className="text-primary ">snapshot.ai</span>
+        <h1 className="">
+          <p className="text-6xl tracking-tighter text-muted-foreground/90 font-light">
+            Introducing{" "}
+            <span className="text-primary font-bold">snapshot.ai</span>
           </p>
         </h1>
         <h2 className="text-2xl font-medium pt-4 text-black/80">
