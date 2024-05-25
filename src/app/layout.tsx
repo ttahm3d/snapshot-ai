@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={fonts.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange>
           <Header />

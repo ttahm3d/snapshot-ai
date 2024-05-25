@@ -4,11 +4,12 @@ import { ModeToggle } from "../DarkModeToggle";
 export default function Header() {
   return (
     <header className="border-b p-4">
-      <section className="container  flex items-center">
+      <section className="container flex items-center gap-4">
         <h2 className="text-3xl font-bold">snapshot.ai</h2>
         <nav className="ml-auto">
           <Link href="#pricing">Pricing</Link>
         </nav>
+        <ModeToggle />
       </section>
     </header>
   );
