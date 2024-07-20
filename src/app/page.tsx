@@ -1,11 +1,11 @@
-import { Features, Hero } from "@/components";
+import { Hero } from "@/components";
+import HowItWorks from "@/components/common/HowItWorks/HowItWorks";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Features />
-      {/* <Pricing /> */}
+      <HowItWorks />
     </main>
   );
 }
