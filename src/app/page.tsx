@@ -1,11 +1,11 @@
-import Hero from "@/components/common/Hero/Hero";
-import Pricing from "@/components/common/Pricing/Pricing";
+import { Hero } from "@/components";
+import HowItWorks from "@/components/common/HowItWorks/HowItWorks";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Pricing />
+      <HowItWorks />
     </main>
   );
 }

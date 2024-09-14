@@ -45,7 +45,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section className="bg-secondary py-8" id="pricing">
+    <section className="bg-primary/10 py-8" id="pricing">
       <section className="container">
         <h2 className="text-4xl font-bold text-center">Pricing</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-8 md:gap-32 pt-12 px-4">
