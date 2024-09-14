@@ -4,21 +4,19 @@ const gorq = new Gorq({
   apiKey: "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",
 });
 
-export const runtime = "edge";
-
 const getChatCompletion = async (outputLength: string, numberOfPoints: number, text: string) => {
   return gorq.chat.completions.create({
     model: "llama3-70b-8192",
     messages: [
       {
         role: "system",
-        content: `Act as a summarizing assistant that takes the input from user 
+        content: `You are an expert inAct as a summarizing assistant that takes the input from user 
           and generates the appraisal summaries. 
           Don't respond to any other queries. 
-          Keep the points concise and don't lose 
-          the context of the text being summarized. Keep the text withing ${outputLength} number 
-          of characters inclusive of spaces. 
-          Return the summary as ${numberOfPoints} bullet points`,
+          Keep the points concise and don't lose the context of the text being summarized. 
+          Keep the text within ${outputLength} number of characters inclusive of spaces. 
+          Return the summary as ${numberOfPoints} bullet points
+          `,
       },
       {
         role: "user",
@@ -90,7 +88,6 @@ export async function POST(req: Request, res: Response) {
 
   const chatCompletion = await getChatCompletion(outputLength, numberOfPoints, text);
   // Print the completion returned by the LLM.
-  console.log(chatCompletion.choices[0]?.message?.content || "");
   // console.log(response);
   return Response.json({ response: chatCompletion.choices[0]?.message?.content || "" });
 }

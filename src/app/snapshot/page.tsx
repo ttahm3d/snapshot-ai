@@ -53,7 +53,7 @@ export default function SnapshotPage() {
               onChange={(e) => setText(e.target.value)}
               id="input-text"
               className="w-full resize-y py-2 px-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-md border border-input bg-background"
-              rows={3}
+              rows={11}
               placeholder="Enter the text to be summarized"
             ></Textarea>
             <small className="text-neutral-500 text-xs">{text.length} characters</small>
@@ -92,11 +92,11 @@ export default function SnapshotPage() {
         </div>
       </form>
       <div className="py-8 px-4 col-span-2">
-        <div className="border-dotted border p-4 h-full text-primary bg-secondary">
+        <div className="border-dotted border p-4 h-full text-primary bg-secondary flex flex-col">
           {output === "" ? (
             <>Please provide the details to see the output</>
           ) : (
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{output}</ReactMarkdown>
+            <ReactMarkdown>{output}</ReactMarkdown>
           )}
         </div>
       </div>
