@@ -29,7 +29,7 @@ export default function SnapshotPage() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    fetch("http://localhost:3000/api/snapshot", {
+    fetch("/api/snapshot", {
       method: "POST",
       body: JSON.stringify({
         text: text,
