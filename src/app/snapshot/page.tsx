@@ -44,8 +44,8 @@ export default function SnapshotPage() {
 
   return (
     <div className="flex-1 container grid grid-cols-3 place-items-stretch h-full content-center min-h-full">
-      <form className="col-span-3 md:col-span-1" onSubmit={handleSubmit}>
-        <div className="py-8 px-4  grid grid-cols-2 gap-8">
+      <form className="col-span-3 px-0 md:col-span-1" onSubmit={handleSubmit}>
+        <div className="py-8 md:px-4  grid grid-cols-2 gap-8">
           <div className="flex flex-col gap-2 col-span-2">
             <Label htmlFor="input-text">Text</Label>
             <Textarea
@@ -91,7 +91,7 @@ export default function SnapshotPage() {
           </Button>
         </div>
       </form>
-      <div className="py-8 px-4 col-span-3 md:col-span-2">
+      <div className="py-8 px-0 md:px-4 col-span-3 md:col-span-2">
         <div className="border-dotted border p-4 h-full text-primary bg-secondary flex flex-col">
           {output === "" ? (
             <>Please provide the details to see the output</>
